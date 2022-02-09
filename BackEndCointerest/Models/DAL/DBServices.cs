@@ -73,6 +73,7 @@ namespace BackEndCointerest.Models.DAL
                     usr.Birthdate = (DateTime)dr["birthdate"];
                     usr.Image = (string)dr["userImage"];
                     usr.Password = (string)dr["userPassword"];
+                    usr.Bio = (string)dr["bio"];
                     users.Add(usr);
 
                 }
