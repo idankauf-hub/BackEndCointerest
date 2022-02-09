@@ -35,8 +35,18 @@ namespace BackEndCointerest.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody] string value)
+        public IHttpActionResult Post([FromBody]User user)
         {
+            try
+            {
+                user.Insert();
+                return Created(new Uri(Request.RequestUri.AbsoluteUri + user.Username), user);
+
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.BadRequest, ex);
+            }
         }
 
         // PUT api/<controller>/5

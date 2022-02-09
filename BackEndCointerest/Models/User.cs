@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
+using System.Net;
 
 namespace BackEndCointerest.Models
 {
@@ -36,6 +38,11 @@ namespace BackEndCointerest.Models
             DBServices ds = new DBServices();
             List<User> users = ds.Get_users(username);
             return users;
+        }
+        public void Insert()
+        {
+            DBServices ds = new DBServices();
+            ds.Insert(this);
         }
 
     }
