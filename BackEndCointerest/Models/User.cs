@@ -14,24 +14,27 @@ namespace BackEndCointerest.Models
         private DateTime birthdate;
         private string image;
         private string password;
+        private string bio;
 
         public User()
         {
 
         }
 
-        public User(string username, DateTime birthdate, string image, string password)
+        public User(string username, DateTime birthdate, string image, string password,string bio)
         {
             this.username = username;
             this.birthdate = birthdate;
             this.image = image;
             this.password = password;
+            this.bio = bio;
         }
 
         public string Username { get => username; set => username = value; }
         public DateTime Birthdate { get => birthdate; set => birthdate = value; }
         public string Image { get => image; set => image = value; }
         public string Password { get => password; set => password = value; }
+        public string Bio { get => bio; set => bio = value; }
 
         public List<User> get_users(string username)
         {

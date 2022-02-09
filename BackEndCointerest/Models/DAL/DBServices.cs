@@ -145,8 +145,8 @@ namespace BackEndCointerest.Models.DAL
             String command;
             StringBuilder sb = new StringBuilder();
             // use a string builder to create the dynamic string
-            sb.AppendFormat("Values('{0}', '{1}', '{2}', '{3}')", user.Username, user.Password, user.Image, user.Birthdate);
-            String prefix = "INSERT INTO Users_2022 " + "([username], [userPassword], [userImage],[birthdate])";
+            sb.AppendFormat("Values('{0}', '{1}', '{2}', '{3}')", user.Username, user.Password, user.Image, user.Birthdate,user.Bio);
+            String prefix = "INSERT INTO Users_2022 " + "([username], [userPassword], [userImage],[birthdate],[bio])";
             command = prefix + sb.ToString();
 
             return command;
